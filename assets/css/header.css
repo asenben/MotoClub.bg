@@ -108,12 +108,12 @@
         display: block; 
     }
 
-    .wrapper .header-section .main-menu .open-icon {
-        display: inline-block; 
-    }
-
-    .wrapper .header-section .main-menu .close-icon {
+    .main-menu ul.active + .taggle-main .open-icon {
         display: none; 
+    }
+    
+    .main-menu ul.active + .taggle-main .close-icon {
+        display: inline-block; 
     }
 
     .wrapper .header-section .main-menu .taggle-main i {
