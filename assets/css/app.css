@@ -1,0 +1,23 @@
+/* FONT */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/* CSS */
+@import url('header.css');
+@import url('main.css');
+@import url('footer.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", serif;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+}
