@@ -16,13 +16,14 @@ document.querySelector('.taggle-main').addEventListener('click', () => {
 
 function highlightActiveLink() {
     const currentPage = window.location.pathname;
+
     const menuLinks = document.querySelectorAll('.main-menu ul li a');
+
+    menuLinks.forEach(link => link.classList.remove('active'));
 
     menuLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
-        } else {
-            link.classList.remove('active'); 
         }
     });
 }

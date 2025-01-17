@@ -62,15 +62,13 @@
     transition: transform 0.3s ease; 
 }
 
-.wrapper .header-section .main-menu ul li a::after {
-    content: ''; 
+.main-menu ul li a::after {
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 2px; 
-    transform: scaleX(0); 
-    transform-origin: right; 
+    height: 2px;
     background-color: transparent;
     transform: scaleX(0);
     transform-origin: right;
@@ -82,9 +80,9 @@
     border-bottom: 2px solid white; 
 }
 
-.wrapper .header-section .main-menu ul li a.active::after {
+.main-menu ul li a.active::after {
     background-color: white; 
-    transform: scaleX(1); 
+    transform: scaleX(1);
     transform-origin: left;
 }
 
