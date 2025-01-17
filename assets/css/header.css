@@ -33,7 +33,7 @@
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.wrapper .header-section .main-menu ul li a > i.fas {
+.wrapper .header-section .main-menu ul li a i.fas {
     margin-right: 5px;
 }
 
