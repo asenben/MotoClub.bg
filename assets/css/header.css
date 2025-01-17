@@ -33,6 +33,10 @@
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.wrapper .header-section .main-menu ul li a > i.fa {
+    margin-right: 5px;
+}
+
 .wrapper .header-section .main-menu ul li a:hover::after {
     content: ''; 
     position: absolute;
