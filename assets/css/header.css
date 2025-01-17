@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 15px 0;
     background-color: #202937;
+    transition: all 0.3s ease;
 }
 
 .wrapper .header-section .logo img {
@@ -28,6 +30,7 @@
     padding: 10px 0;
     position: relative; 
     display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .wrapper .header-section .main-menu ul li a:hover::after {
@@ -38,8 +41,8 @@
     bottom: 0;
     height: 2px; 
     background-color: white; 
-    transform: scaleX(1); 
-    transform-origin: left; 
+    transform: scaleX(1);  
+    transform-origin: center;
     transition: transform 0.3s ease; 
 }
 
@@ -59,4 +62,30 @@
 .wrapper .header-section .main-menu ul li a.active {
     font-weight: bold; 
     border-bottom: 2px solid white; 
+}
+
+@media (max-width: 768px) {
+    .wrapper .header-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .wrapper .header-section .main-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .wrapper .header-section .main-menu .taggle-main {
+        display: block; 
+        cursor: pointer;
+    }
+
+    .wrapper .header-section .main-menu ul {
+        display: none; 
+    }
+
+    .wrapper .header-section .main-menu ul.active {
+        display: flex; 
+    }
 }
