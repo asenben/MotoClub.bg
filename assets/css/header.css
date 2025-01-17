@@ -76,8 +76,7 @@
     }
 
     .wrapper .header-section .main-menu ul {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
     }
 
     .wrapper .header-section .main-menu .taggle-main {
