@@ -1,8 +1,8 @@
 .wrapper .header-section {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 0;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px; 
     background-color: #202937;
     transition: all 0.3s ease;
 }
@@ -11,8 +11,19 @@
     height: 100px;
 }
 
+.wrapper .header-section .main-menu {
+    display: flex;
+    align-items: center;
+}
+
 .wrapper .header-section .main-menu .taggle-main {
-    display: none;
+    display: none; 
+    cursor: pointer;
+}
+
+.wrapper .header-section .main-menu .taggle-main i {
+    font-size: 24px; 
+    color: white;
 }
 
 .wrapper .header-section .main-menu ul {
@@ -33,7 +44,7 @@
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.wrapper .header-section .main-menu ul li a i.fas {
+.wrapper .header-section .main-menu ul li a i {
     margin-right: 5px;
 }
 
