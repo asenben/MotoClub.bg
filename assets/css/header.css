@@ -108,11 +108,11 @@
         display: block; 
     }
 
-    .main-menu ul.active + .taggle-main .open-icon {
+    .main-menu ul.active + .taggle-main .close-icon {
         display: none; 
     }
     
-    .main-menu ul.active + .taggle-main .close-icon {
+    .main-menu ul.active + .taggle-main .open-icon {
         display: inline-block; 
     }
 
