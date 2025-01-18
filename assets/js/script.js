@@ -24,15 +24,23 @@ function highlightActiveLink() {
     // Премахване на класа active от всички линкове
     menuLinks.forEach(link => link.classList.remove('active'));
 
-    // Добавяне на класа active на текущия линк
+    // Добавяне на класа active на текущия линк (по URL)
     menuLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+        if (link.getAttribute('href') === currentPage.split("/").pop()) {
             link.classList.add('active');
         }
+    });
+
+    // Добавяне на подчертаване при клик
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Премахване на класа active от всички линкове
+            menuLinks.forEach(l => l.classList.remove('active'));
+            // Добавяне на класа active на кликнатия линк
+            link.classList.add('active');
+        });
     });
 }
 
 // Изпълнение на функцията при зареждане на страницата
 highlightActiveLink();
-
-
