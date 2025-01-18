@@ -42,7 +42,7 @@
     padding: 10px 0;
     position: relative; 
     display: inline-block;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .wrapper .header-section .main-menu ul li a i {
@@ -57,14 +57,14 @@
 .wrapper .header-section .main-menu ul li a:hover::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 50%;
     right: 0;
     bottom: 0;
     height: 2px;
     background-color: white; 
-    transform: scaleX(1);  
+    transform: scaleX(-50%);  
     transform-origin: left;
-    transition: transform 0.5s ease, background-color 0.5s ease; 
+    transition: transform 0.5s ease; 
 }
 
 @media (max-width: 850px) {
@@ -78,7 +78,7 @@
 
   .wrapper .header-section .main-menu ul.active {
     display: flex;
-    flex-direction: column; /* Вертикално меню */
+    flex-direction: column;
     gap: 10px;
   }
 
