@@ -5,6 +5,7 @@
   padding: 0 20px;
   background-color: #202937;
   transition: all 0.3s ease;
+  box-shadow: 0px 3px 23px 5px;
 }
 
 .wrapper .header-section .logo img {
@@ -72,6 +73,7 @@
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .wrapper .header-section .main-menu ul li a.active {
