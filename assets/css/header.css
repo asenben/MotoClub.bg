@@ -97,6 +97,7 @@
 
   .wrapper .header-section .main-menu ul.active {
     display: flex; 
+    padding-left: 10px;
   }
 
   .wrapper .header-section .main-menu li {
