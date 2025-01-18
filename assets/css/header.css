@@ -73,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0 20px;
     background-color: #202937;
     position: relative;
   }
@@ -82,26 +82,69 @@
     flex: 1;
     text-align: left;
   }
-
+  
   .wrapper .header-section .main-menu ul {
-    display: none; 
+    transform: scaleY(0); /* Скрито меню */
+    transform-origin: top; /* Анимацията започва отгоре */
+    opacity: 0; /* Невидимо меню */
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    padding: 10px 0;
+    margin: 0;
+    padding: 20px 0; /* Запазваме padding */
     background-color: #202937;
     position: absolute;
     top: 100%;
     left: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Анимация за менюто */
   }
-
-  .wrapper .header-section .main-menu ul.active {
-    display: flex; 
-    padding-left: 10px;
+  
+  .wrapper .header-section .main-menu ul.open {
+    transform: scaleY(1); /* Видимо меню */
+    opacity: 1;
+    padding: 20px;
   }
-
-  .wrapper .header-section .main-menu li {
+  
+  
+  .wrapper .header-section .main-menu ul li {
+    opacity: 0; /* По подразбиране невидими */
+    transform: translateY(-20px); /* Леко нагоре */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавни преходи */
     margin-left: 10px;
+  }
+
+  .wrapper .header-section .main-menu ul.open li {
+    opacity: 1; /* Видими, когато менюто е отворено */
+    transform: translateY(0); /* Премахваме трансформацията */
+  }
+
+  /* Закъснение за последователност */
+  .wrapper .header-section .main-menu ul.open li:nth-child(1) {
+    transition-delay: 0.1s; /* Закъснение за първия елемент */
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(2) {
+    transition-delay: 0.2s; /* Закъснение за втория елемент */
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+
+  .wrapper .header-section .main-menu ul.open li:nth-child(7) {
+    transition-delay: 0.7s;
   }
 
   .wrapper .header-section .main-menu .toggle-menu {
