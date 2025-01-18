@@ -82,8 +82,6 @@
 
 @media (max-width: 850px) {
   .wrapper .header-section {
-    flex-direction: column;
-    align-items: flex-start;
     padding: 10px;
   }
 
@@ -110,13 +108,5 @@
 
   .wrapper .header-section .main-menu ul.active + .taggle-main .close-icon {
     display: inline-block;
-  }
-
-  .wrapper .header-section .main-menu ul {
-    display: none;
-  }
-
-  .wrapper .header-section .main-menu ul.active {
-    display: flex;
   }
 }
