@@ -1,5 +1,6 @@
 .wrapper .header-section {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   padding: 0 20px;
   background-color: #202937;
