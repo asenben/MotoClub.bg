@@ -1,5 +1,4 @@
 .wrapper .header-section {
-    position: relative;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
@@ -23,7 +22,7 @@
 }
 
 .wrapper .header-section .main-menu .taggle-main i {
-    font-size: 24px; 
+    font-size: 24px;
     color: white;
 }
 
@@ -45,7 +44,7 @@
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.wrapper .header-section .main-menu ul li a i {
+.wrapper .header-section .main-menu ul li a i.fas {
     margin-right: 5px;
 }
 
@@ -82,42 +81,25 @@
 
 @media (max-width: 850px) {
     .wrapper .header-section {
-        flex-direction: row; 
-        justify-content: space-between; 
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
 
     .wrapper .header-section .main-menu ul {
-        display: none; 
-        flex-direction: column; 
-        gap: 10px; 
-        width: 100%; 
-        background-color: #202937; 
-        padding: 10px 20px; 
-    }
-
-    .wrapper .header-section .main-menu ul.active {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #202937;
-        width: 100%;
-        padding: 10px 20px; 
+        display: none;
     }
 
     .wrapper .header-section .main-menu .taggle-main {
         display: block; 
+        cursor: pointer;
     }
 
-    .main-menu ul.active + .taggle-main .open-icon {
+    .wrapper .header-section .main-menu ul {
         display: none; 
     }
-    
-    .main-menu ul.active + .taggle-main .close-icon {
-        display: inline-block; 
-    }
 
-    .wrapper .header-section .main-menu .taggle-main i {
-        font-size: 28px; 
+    .wrapper .header-section .main-menu ul.active {
+        display: flex; 
     }
 }
