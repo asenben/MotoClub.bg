@@ -58,12 +58,9 @@
   border-radius: 10px;
 }
 
-.wrapper .header-section .main-menu ul li a:hover::after {
-  width: 100%; 
-}
-
+.wrapper .header-section .main-menu ul li a:hover::after,
 .wrapper .header-section .main-menu ul li a.active::after {
-  width: 100%;
+  width: 100%; 
   background-color: white;
 }
 
