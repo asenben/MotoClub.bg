@@ -82,49 +82,45 @@
     flex: 1;
     text-align: left;
   }
-  
+
   .wrapper .header-section .main-menu ul {
-    transform: scaleY(0); /* Скрито меню */
-    transform-origin: top; /* Анимацията започва отгоре */
-    opacity: 0; /* Невидимо меню */
+    max-height: 0; 
+    overflow: hidden; 
+    opacity: 0;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     margin: 0;
-    padding: 20px 0; /* Запазваме padding */
+    padding: 20px 0; 
     background-color: #202937;
     position: absolute;
     top: 100%;
     left: 0;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Анимация за менюто */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Плавни преходи за менюто */
   }
   
   .wrapper .header-section .main-menu ul.open {
-    transform: scaleY(1); /* Видимо меню */
-    opacity: 1;
-    padding: 20px;
+    opacity: 1; /* Видимо меню */
   }
-  
   
   .wrapper .header-section .main-menu ul li {
     opacity: 0; /* По подразбиране невидими */
     transform: translateY(-20px); /* Леко нагоре */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавни преходи */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавни преходи за връзките */
     margin-left: 10px;
   }
-
+  
   .wrapper .header-section .main-menu ul.open li {
-    opacity: 1; /* Видими, когато менюто е отворено */
-    transform: translateY(0); /* Премахваме трансформацията */
-  }
-
-  /* Закъснение за последователност */
+    opacity: 1; 
+    transform: translateY(0); 
+  }  
+  
   .wrapper .header-section .main-menu ul.open li:nth-child(1) {
-    transition-delay: 0.1s; /* Закъснение за първия елемент */
+    transition-delay: 0.1s;
   }
 
   .wrapper .header-section .main-menu ul.open li:nth-child(2) {
-    transition-delay: 0.2s; /* Закъснение за втория елемент */
+    transition-delay: 0.2s; 
   }
 
   .wrapper .header-section .main-menu ul.open li:nth-child(3) {
