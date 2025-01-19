@@ -116,10 +116,3 @@
   }
   
 }
-
-@media (min-width: 1201px) {
-  .main-menu ul {
-      display: flex !important; 
-      max-height: none !important; 
-  }
-}

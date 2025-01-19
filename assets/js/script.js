@@ -54,26 +54,3 @@ function highlightActiveLink() {
   });
 }
 highlightActiveLink();
-
-
-function removeInlineStylesOnDesktop() {
-  const menu = document.querySelector(".main-menu ul");
-  const menuIcon = document.querySelector(".toggle-menu");
-  const viewportWidth = window.innerWidth;
-
-  if (viewportWidth > 1200 && menu) {
-      menu.style.maxHeight = "";
-      menu.classList.remove("active");
-      if (menuIcon) {
-          const openIcon = document.querySelector(".open-icon");
-          const closeIcon = document.querySelector(".close-icon");
-          if (openIcon && closeIcon) {
-              openIcon.style.display = "inline-block";
-              closeIcon.style.display = "none";
-          }
-      }
-      document.body.style.overflow = "auto";
-  }
-}
-removeInlineStylesOnDesktop();
-window.addEventListener("resize", removeInlineStylesOnDesktop);
