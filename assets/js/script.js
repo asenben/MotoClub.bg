@@ -1,38 +1,49 @@
-const menu = document.querySelector(".main-menu ul");
-const menuIcon = document.querySelector(".toggle-menu");
-const openIcon = document.querySelector(".open-icon");
-const closeIcon = document.querySelector(".close-icon");
+function mainMenu() {
+  const menu = document.querySelector(".main-menu ul");
+  const menuIcon = document.querySelector(".toggle-menu");
+  const openIcon = document.querySelector(".open-icon");
+  const closeIcon = document.querySelector(".close-icon");
+  const menuItems = document.querySelectorAll(".main-menu ul li");
 
-menuIcon.addEventListener("click", () => {
-  menu.classList.toggle("active"); // Превключва класа active на UL
-  openIcon.style.display = menu.classList.contains("active")
-    ? "none"
-    : "inline-block";
-  closeIcon.style.display = menu.classList.contains("active")
-    ? "inline-block"
-    : "none";
-});
+  menuIcon.addEventListener("click", () => {
+    if (menu.classList.contains("active")) {
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.remove("visible");
+        }, index * 100);
+      });
 
+      setTimeout(() => {
+        menu.style.maxHeight = "0";
+        setTimeout(() => menu.classList.remove("active"), 300);
+        openIcon.style.display = "inline-block";
+        closeIcon.style.display = "none";
+      }, menuItems.length * 100);
+    } else {
+      menu.classList.add("active");
+      menu.style.maxHeight = menu.scrollHeight + "px";
 
-function highlightActiveLink() {
-  const currentPage = window.location.pathname;
+      menuItems.forEach((item, index) => {
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, index * 100);
+      });
 
-  const menuLinks = document.querySelectorAll(".main-menu ul li a");
-
-  menuLinks.forEach((link) => link.classList.remove("active"));
-
-  menuLinks.forEach((link) => {
-    if (link.getAttribute("href") === currentPage.split("/").pop()) {
-      link.classList.add("active");
+      openIcon.style.display = "none";
+      closeIcon.style.display = "inline-block";
     }
-  });
-
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      menuLinks.forEach((l) => l.classList.remove("active"));
-      link.classList.add("active");
-    });
+    document.body.style.overflow = menu.classList.contains("active") ? "hidden" : "auto";
   });
 }
+mainMenu();
 
-highlightActiveLink();
+function removeInlineStylesOnDesktop() {
+  const menu = document.querySelector(".main-menu ul");
+  const viewportWidth = window.innerWidth;
+
+  if (viewportWidth > 1200 && menu) {
+      menu.style.maxHeight = "";
+  }
+}
+removeInlineStylesOnDesktop();
+window.addEventListener("resize", removeInlineStylesOnDesktop);
