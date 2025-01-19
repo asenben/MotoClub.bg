@@ -31,28 +31,27 @@
 .wrapper .header-section .main-menu ul li a::after {
   content: "";
   position: absolute;
-  bottom: -5px; /* Леко под текста */
-  left: 0;
-  width: 100%; /* Покрива ширината на текста */
-  height: 2px;
-  background-color: #fff;
-  transform: scaleX(0); /* Скрито по подразбиране */
-  transform-origin: left; /* Линията започва от левия край */
-  transition: transform 0.3s ease; /* Плавен преход */
-  border-radius: 10px;
+  bottom: -5px; 
+  left: 50%; 
+  width: 0; 
+  height: 3px; 
+  background-color: #ffffff; 
+  transform: translateX(-50%); 
+  transition: width 0.3s ease, background-color 0.3s ease; 
+  border-radius: 10px; 
 }
-
-/* Активна връзка */
-.wrapper .header-section .main-menu ul li a.active::after {
-  transform: scaleX(1); /* Линията остава видима */
-}
-
 
 .wrapper .header-section .main-menu ul li a:hover::after,
 .wrapper .header-section .main-menu ul li a.active::after {
-  transform: scaleX(1); 
-  transform-origin: center;
-  border-radius: 10px;
+  width: 100%; 
+  left: 0; 
+  transform: none; 
+  background-color: #ffffff; 
+}
+
+.wrapper .header-section .main-menu ul li a:not(:hover)::after {
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
 .wrapper .header-section .main-menu ul li i.fas {

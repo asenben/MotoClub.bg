@@ -37,6 +37,25 @@ function mainMenu() {
 }
 mainMenu();
 
+function highlightActiveLink() {
+  const menuLinks = document.querySelectorAll('.main-menu ul li a');
+  const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
+
+  menuLinks.forEach(link => {
+      let linkPath = link.getAttribute('href').replace(/\/$/, "").toLowerCase();
+
+      if (!linkPath.startsWith("/")) {
+          linkPath = "/" + linkPath;
+      }
+
+      if (linkPath === currentPath) {
+          link.classList.add('active');
+      }
+  });
+}
+highlightActiveLink();
+
+
 function removeInlineStylesOnDesktop() {
   const menu = document.querySelector(".main-menu ul");
   const viewportWidth = window.innerWidth;
