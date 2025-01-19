@@ -32,3 +32,25 @@ function mainMenu() {
   });
 }
 mainMenu();
+
+function highlightActiveLink() {
+  const menuLinks = document.querySelectorAll(".main-menu ul li a");
+  const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
+
+  menuLinks.forEach(link => {
+      let linkPath = link.getAttribute("href").replace(/\/$/, "").toLowerCase();
+
+      if (!linkPath.startsWith("/")) {
+          linkPath = "/" + linkPath;
+      }
+
+      // Добавяне на "active" към текущия линк
+      if (currentPath.includes(linkPath)) {
+          link.classList.add("active");
+      } else {
+          link.classList.remove("active");
+      }
+  });
+}
+highlightActiveLink();
+
