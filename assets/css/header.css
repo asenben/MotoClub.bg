@@ -35,30 +35,19 @@
 .wrapper .header-section .main-menu ul li a::after {
   content: "";
   position: absolute;
-  bottom: -5px; 
+  bottom: -5px;
   left: 0;
-  width: 0; 
-  height: 2px; 
-  background-color: #ffffff; 
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
   transition: all 0.3s ease;
   transform-origin: left; 
+  border-radius: 10px;
 }
 
 .wrapper .header-section .main-menu ul li a:hover::after {
   width: 100%; 
-}
-
-.wrapper .header-section .main-menu ul li a::after {
-  transform-origin: right; 
-}
-
-.wrapper .header-section .main-menu ul li a:hover::after {
   transform-origin: left; 
-}
-
-.wrapper .header-section .main-menu ul li a:not(:hover)::after {
-  width: 0; 
-  transform-origin: right; 
 }
 
 .wrapper .header-section .main-menu ul li a.active::after {
