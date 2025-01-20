@@ -63,18 +63,19 @@ function addVideoToHero() {
   }
 
   const video = document.createElement('video');
-  video.setAttribute('src', 'http://localhost:5500/assets/video/video.mp4');
-  video.setAttribute('autoplay', true);
-  video.setAttribute('loop', true);
-  video.setAttribute('muted', true);
-  video.setAttribute('playsinline', true);
+  video.src = 'assets/video/video.mp4'; 
+  video.autoplay = true; 
+  video.loop = true; 
+  video.muted = true; 
+  video.playsInline = true; 
+  video.preload = 'auto'; 
 
-  hero.appendChild(video);
-
-  // Опит за стартиране на видеото
-  video.play().catch(error => {
-      console.error('Видеото не можа да стартира автоматично:', error);
+  video.addEventListener('canplay', () => {
+      video.play().catch(error => {
+          console.error('Грешка при стартиране на видеото:', error);
+      });
   });
+  hero.appendChild(video);
 }
 
 addVideoToHero();
