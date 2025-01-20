@@ -12,12 +12,16 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: "Open Sans", serif;
+    height: 100%; 
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
     position: relative;
+    height: 100%;
     margin: 0 auto;
     max-width: 1920px;
 }
