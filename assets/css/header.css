@@ -63,9 +63,22 @@
 .wrapper .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 87vh;
   overflow: hidden;
   z-index: 1; 
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Черен слой с прозрачност */
+  z-index: 1; 
+  pointer-events: none;
 }
 
 .hero video {
@@ -76,7 +89,7 @@
   height: 100%; 
   object-fit: cover; 
   z-index: -1; 
-  object-fit: cover;
+  mix-blend-mode: multiply;
 }
 
 @media (max-width: 1200px) {
