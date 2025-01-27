@@ -62,7 +62,7 @@ function addVideoToHero() {
   }
 
   const video = document.createElement('video');
-  video.src = 'assets/video/background-video.mp4'; 
+  video.src = 'assets/video/hero.mp4'; 
   video.autoplay = true; 
   video.loop = true; 
   video.muted = true; 
