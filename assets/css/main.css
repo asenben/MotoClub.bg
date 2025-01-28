@@ -1,0 +1,142 @@
+main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* --- HERO SECTION (ГЛАВНА СЕКЦИЯ) --- */
+  #hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  #hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  #hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-top: 10px;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+    border: 1px solid white;
+  }
+  
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+  }
+  
+  /* --- ЗА НАС --- */
+  #about {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  #about h2 {
+    font-size: 32px;
+    color: white;
+  }
+  
+  #about p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+  
+  /* --- ПРЕДСТОЯЩИ СЪБИТИЯ --- */
+  #events {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  #events h2 {
+    font-size: 32px;
+    color: white;
+  }
+  
+  .event {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    border-left: 4px solid white;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .event:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* --- ГАЛЕРИЯ --- */
+  #gallery {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* --- РЕСПОНСИВНОСТ --- */
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 36px;
+    }
+  
+    #hero p {
+      font-size: 18px;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
