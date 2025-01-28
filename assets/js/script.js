@@ -78,3 +78,24 @@ function addVideoToHero() {
 }
 
 addVideoToHero();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedElements = document.querySelectorAll(".feature, .intro");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else {
+                    entry.target.classList.remove("show");
+                }
+            });
+        },
+        {
+            threshold: 0.2, // Активира се, когато 20% от елемента се виждат
+        }
+    );
+
+    animatedElements.forEach((el) => observer.observe(el));
+});
